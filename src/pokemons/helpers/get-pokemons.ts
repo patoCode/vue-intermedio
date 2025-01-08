@@ -1,8 +1,10 @@
 import axios from 'axios'
 import pokemonApi from '../api/pokemonApi'
 import type { Pokemon, PokemonListResponse, PokemonResponse } from '../interfaces'
+import { delay } from './sleep'
 
 export const getPokemons = async (): Promise<Pokemon[]> => {
+  await delay(2)
   const { data } = await pokemonApi.get<PokemonListResponse>('pokemon?limit=45')
 
   const pokemonPromises: Promise<Pokemon>[] = []
