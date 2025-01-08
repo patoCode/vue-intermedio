@@ -9,6 +9,15 @@ const router = createRouter({
       name: 'home',
       component: CounterView,
     },
+    {
+      path: '/:pathMatch(.*)',
+      name: 'redirect',
+      redirect: () => {
+        //& Logica de lo que sea
+        console.log('Ruta no existe')
+        return { name: 'home' }
+      },
+    },
   ],
 })
 
