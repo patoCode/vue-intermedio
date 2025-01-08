@@ -1,10 +1,12 @@
 <template>
-  <div>
-    <h1>Home</h1>
+  <div class="m-3">
+    <NavBar :links="routerLinks" />
     <RouterView />
   </div>
 </template>
 
 <script lang="ts" setup>
 import { RouterView } from 'vue-router'
+import NavBar from './pokemons/shred/components/NavBar.vue'
+import { routerLinks } from './pokemons/router/list-routes'
 </script>
