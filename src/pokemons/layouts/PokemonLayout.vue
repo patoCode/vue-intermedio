@@ -1,5 +1,7 @@
 <template>
   <div>Pokemon Layout</div>
-  <RouterView></RouterView>
+  <Suspense>
+    <RouterView />
+  </Suspense>
 </template>
 <script setup lang="ts"></script>
