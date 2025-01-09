@@ -6,15 +6,7 @@
   </ul>
 </template>
 <script setup lang="ts">
-import { computed } from 'vue'
-import { useQuery } from '@tanstack/vue-query'
-import { getPokemons } from '../helpers/get-pokemons'
+import { usePokemons } from '../composables/usePokemons'
 
-const { isLoading, data: pokemons } = useQuery({ queryKey: ['pokemons'], queryFn: getPokemons })
-
-const count = computed(() => pokemons.value?.length ?? 0)
-
-// import { usePokemons } from '../composables/usePokemons'
-
-// const { isLoading, count, pokemons } = usePokemons() -->
+const { isLoading, count, pokemons } = usePokemons()
 </script>
