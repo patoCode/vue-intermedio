@@ -8,6 +8,10 @@ export const pokemonRoutes: RouteRecordRaw = {
   children: [
     { path: `/${ROUTE_NAME}/list`, component: () => import('@/pokemons/pages/PokemonList.vue') },
     {
+      path: `/${ROUTE_NAME}/list-native`,
+      component: () => import('@/pokemons/pages/PokemonListNative.vue'),
+    },
+    {
       path: `/${ROUTE_NAME}/search`,
       component: () => import('@/pokemons/pages/PokemonSearch.vue'),
     },
