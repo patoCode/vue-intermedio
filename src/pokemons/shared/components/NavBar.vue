@@ -3,7 +3,12 @@
     <p class="text-slate-300">{{ title }}</p>
     <hr />
     <ul class="flex items-center justify-start mt-3 gap-2">
-      <RouterLink v-for="link of links" :key="link.path" :to="link.path">
+      <RouterLink
+        class="border border-blue-500 p-2 rounded-md hover:text-blue-900 hover:bg-blue-200"
+        v-for="link of links"
+        :key="link.path"
+        :to="link.path"
+      >
         {{ link.name }}
       </RouterLink>
     </ul>

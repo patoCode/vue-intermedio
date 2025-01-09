@@ -7,6 +7,6 @@
 
 <script lang="ts" setup>
 import { RouterView } from 'vue-router'
-import NavBar from './pokemons/shred/components/NavBar.vue'
+import NavBar from './pokemons/shared/components/NavBar.vue'
 import { routerLinks } from './pokemons/router/list-routes'
 </script>
